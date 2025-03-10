@@ -21,4 +21,4 @@ async def register(
     response: Response,
     data: OAuth2PasswordRequestForm = Depends()
 ):
-    print(data)
+    pass
