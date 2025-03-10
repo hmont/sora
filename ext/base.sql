@@ -1,0 +1,21 @@
+CREATE TABLE uploads
+(
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    filename VARCHAR(32) NOT NULL,
+    upload_id VARCHAR(32) NOT NULL,
+    original_filename VARCHAR(255) NOT NULL,
+
+    uploader_id BIGINT NOT NULL,
+    uploader_name VARCHAR(32) NOT NULL,
+    uploaded TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE users
+(
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(32) NOT NULL,
+    password_hashed VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    priv BIGINT NOT NULL DEFAULT 1
+);
