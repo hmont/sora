@@ -21,6 +21,6 @@ jobs:
       - name: Install poetry
         run: python -m pip install --upgrade poetry wheel
       - name: Install dependencies
-        run: poetry install --no-root --with dev
+        run: poetry install --no-root
       - name: Run pylint
         run: poetry run pylint .
