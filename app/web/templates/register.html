@@ -3,37 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/register.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Gabarito:wght@400..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <title>Register | Sora</title>
 </head>
 <body>
-    <h2>Register</h2>
-    <form id="register-form">
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-        <button id="register-button">Register</button>
+    <div class="container">
+        <h1 class="title">Register</h1>
+        <form id="register-form" class="register-form">
+            <div class="container">
+                <input type="text" name="username" placeholder="Username" required>
+            </div>
+            <div class="container">
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="container">
+                <button id="register-button" class="button-primary">Register</button>
+            </div>
+        </form>
+        <script type="text/javascript" src="/static/js/register.js"></script>
+    </div>
 
-    <script>
-        const registerForm = document.getElementById('register-form');
-        const registerButton = document.getElementById('register-button');
-
-        registerButton.addEventListener('click', async (e) => {
-            e.preventDefault();
-
-            const formData = new FormData(registerForm);
-            const response = await fetch('/api/register', {
-                method: 'POST',
-                body: formData
-            });
-
-            const data = await response.json();
-            if (data.success) {
-                alert('Registration successful');
-            } else {
-                alert(data.message);
-            }
-        });
-    </script>
 </body>
 </html>

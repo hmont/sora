@@ -1,0 +1,39 @@
+html {
+    background-color: #071424;
+    color: white;
+    font-family: "Gabarito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.title {
+    text-align: center;
+    font-size: 56px;
+}
+
+input {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    background-color: rgb(30, 30, 30);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    min-height: 20px;
+}
+
+.button-primary {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    min-width: 130px;
+    min-height: 40px;
+    border-width: 0px;
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+}

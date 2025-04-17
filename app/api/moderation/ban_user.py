@@ -31,6 +31,8 @@ async def ban_user(
             content="You must provide either user_id or username"
         )
 
+    # TODO: ban user
+
     return Response(
         status_code=200, # TODO: change status code
         content="User has been banned"

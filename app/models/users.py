@@ -59,8 +59,8 @@ async def fetch_one(
     if email:
         query = query.where(UsersTable.email == email)
 
-    if upload_key:
-        query = query.where(UsersTable.upload_key == upload_key)
+    #if upload_key:
+        # query = query.where(UsersTable.upload_key == upload_key)
 
     query = str(query)
 

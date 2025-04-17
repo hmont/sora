@@ -4,6 +4,8 @@ from fastapi import APIRouter
 
 from fastapi.responses import FileResponse
 
+from fastapi.staticfiles import StaticFiles
+
 from .index import router as index_router
 from .register import router as register_router
 

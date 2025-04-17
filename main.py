@@ -4,6 +4,8 @@ import uvicorn
 
 from fastapi import FastAPI
 
+from fastapi.staticfiles import StaticFiles
+
 from contextlib import asynccontextmanager
 
 from app.state import services
@@ -36,6 +38,8 @@ app.include_router(api_router)
 app.include_router(web_router)
 
 app.add_middleware(LimiterMiddleware)
+
+app.mount("/static", StaticFiles(directory="app/web/static"), name="static")
 
 if __name__ == "__main__":
     uvicorn.run(
